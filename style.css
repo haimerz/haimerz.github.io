@@ -1,0 +1,343 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0f172a;
+    color: #cbd5e1;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Пиксельный текст */
+.pixel-text {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pixel-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+/* Шапка сайта */
+header {
+    padding: 80px 0 40px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #7dd3fc;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(125, 211, 252, 0.3);
+}
+
+/* Контейнеры для котят */
+.kitten-container {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.kitten-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.kitten-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(15, 23, 42, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #7dd3fc;
+}
+
+/* Специфичные стили для каждой гифки */
+.header-kitten {
+    max-width: 300px;
+    border: 3px solid #334155;
+}
+
+.header-kitten:hover {
+    transform: scale(1.03);
+    border-color: #7dd3fc;
+    box-shadow: 0 15px 30px rgba(125, 211, 252, 0.2);
+}
+
+/* Секция "Обо мне" */
+.about {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #7dd3fc;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    font-size: 1.1rem;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* Спящий котенок с особенным оформлением */
+.sleeping-kitten {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+    perspective: 1000px;
+    transform: rotateY(-5deg);
+    border: 1px solid #334155;
+}
+
+.sleeping-kitten:hover {
+    transform: rotateY(0deg);
+}
+
+.moon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f8fafc;
+    box-shadow: 0 0 20px #f8fafc, 0 0 40px rgba(248, 250, 252, 0.3);
+    z-index: 2;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 2px);
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.sleep-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #c084fc;
+    animation: sleepPulse 2s infinite;
+}
+
+/* Секция "Навыки" */
+.skills {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.skill-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: #7dd3fc;
+    box-shadow: 0 10px 25px rgba(125, 211, 252, 0.1);
+}
+
+.pixel-icon {
+    font-size: 2.5rem;
+    color: #7dd3fc;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #7dd3fc;
+}
+
+.skill-card p {
+    color: #94a3b8;
+}
+
+/* Котенок в коробке */
+.box-kitten {
+    max-width: 500px;
+    height: 250px;
+    border: 1px solid #334155;
+}
+
+
+/* Подвал сайта */
+footer {
+    padding: 70px 0 40px;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #7dd3fc;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Особенная гифка в подвале */
+.special-kitten {
+    flex: 1; /* Уменьшаем flex-коэффициент */
+    max-width: 350px; /* Уменьшаем максимальную ширину */
+    height: 350px; /* Фиксируем высоту */
+    border-radius: 50%;
+    border: 3px solid #7dd3fc;
+    box-shadow: 
+        0 0 15px rgba(125, 211, 252, 0.3), /* Уменьшаем тень */
+        0 0 25px rgba(125, 211, 252, 0.1);
+    animation: float 6s ease-in-out infinite;
+    overflow: hidden; /* Обрезаем выходящие за границы элементы */
+}
+
+.special-label {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7dd3fc;
+    background: rgba(15, 23, 42, 0.7);
+    padding: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes sleepPulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; text-shadow: 0 0 10px rgba(192, 132, 252, 0.8); }
+    100% { opacity: 0.5; }
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .about-content,
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .sleeping-kitten,
+    .special-kitten {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .pixel-subtitle {
+        font-size: 0.9rem;
+    }
+}
